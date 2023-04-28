@@ -1,0 +1,145 @@
+.navbar {
+    position: absolute;
+    z-index: 60;
+    top: 34px;
+    width: 100%;
+
+    .container {
+        justify-content: left;
+        align-items: center;
+    }
+
+    &__logo {
+        display: block;
+        max-height: 60px;
+        margin-right: 70px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: left;
+
+        &__pill {
+            padding: 13px 35px 20px;
+
+            &__link {
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                text-decoration: none;
+                letter-spacing: -1;
+                font-size: 18px;
+
+                &::after {
+                    display: block;
+                    content: '';
+                    border-bottom: 2px solid #fff;
+                    transform: scaleX(0);
+                    transition: transform 150ms ease-in-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(3);
+                }
+            }
+        }
+    }
+
+    .h-menu-btn {
+        display: none;
+    }
+
+
+
+    @media (max-width: 1000px) {
+        .container {
+            justify-content: space-between;
+        }
+
+        &__links {
+            display: none;
+        }
+
+        .h-menu-btn {
+            display: block;
+        }
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(1000);
+
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1000);
+    }
+}
+.navbar__overlay-menu {
+    float: left;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    background-color: #fff;
+    z-index: 100;
+    display: none;
+
+    &--active {
+        display: block;
+        animation: slide-left;
+        animation-duration: 1s;
+    }
+    &--return {
+        display: block;
+        animation: slide-right;
+        animation-duration: 1s;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    &__links {
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 64px;
+        text-align: center;
+
+        &__pill {
+            margin-bottom: 24px;
+            font-family: 'Montserrat', sans-serif;
+            
+            a {
+                color: #000;
+                text-decoration: none;
+
+                &::after {
+                    display: block;
+                    content: '';
+                    border-bottom: 2px solid #000;
+                    transform: scaleX(0);
+                    transition: transform 150ms ease-in-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
