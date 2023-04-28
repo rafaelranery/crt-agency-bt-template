@@ -1,0 +1,13 @@
+.quotes {
+    text-align: center;
+    padding: 100px 20px;
+
+    &__quote {
+        font-family: 'Source Sans Pro', serif;
+        font-size: 20px;
+        
+        span {
+            font-style: normal;
+        }
+    }
+}

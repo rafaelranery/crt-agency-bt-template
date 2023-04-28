@@ -1,0 +1,80 @@
+.service-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    transition: 500ms;
+    &__panel {
+        max-height: 360px;
+        overflow: hidden;
+        padding: 40px 50px 0;
+        transition: .5s ease;
+        text-align: center;
+        
+        .title {
+            font-family: 'Montserrat', sans-serif;
+        }
+        &__desc {
+            font-family: 'Source Sans Pro', serif;
+        }
+        img {
+            height: 100px;
+        }
+
+
+
+
+        &--left:hover {
+            background-color: #e3e1d3;
+        }
+        &--center:hover {
+            background-color: #e0cece;
+        }
+        &--right:hover {
+            background-color: #d1d7e0;
+        }
+    }
+
+    &:has(.service-grid__panel--left:hover) {
+        gap: 0px;
+        grid-template-columns: 3fr 0fr 0fr;
+    }
+    &:has(.service-grid__panel--center:hover) {
+        gap: 0px;
+        grid-template-columns: 0fr 3fr 0fr;
+    }
+    &:has(.service-grid__panel--right:hover) {
+        gap: 0px;
+        grid-template-columns: 0fr 0fr 3fr;
+    }
+
+
+
+    @media (max-width: 1024px) {
+        
+        &__panel {
+            padding: 0 25px 0;
+            .title {
+                font-size: 28px;
+            }
+            img {
+                height: 70px;
+            }
+            &__desc {
+                font-size: 14px;
+            }
+        }
+
+        grid-template-columns: 1fr;
+
+        &:has(.service-grid__panel--left:hover) {
+            grid-template-columns: 1fr;
+        }
+        &:has(.service-grid__panel--center:hover) {
+            grid-template-columns: 1fr;
+        }
+        &:has(.service-grid__panel--right:hover) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

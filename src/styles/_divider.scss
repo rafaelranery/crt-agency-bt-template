@@ -1,0 +1,22 @@
+.divider {
+    padding: 50px 80px 50px 300px;
+
+    .title {
+        font-family: 'Montserrat', serif;
+        font-weight: 900;
+        letter-spacing: -1px;
+        margin-bottom: 30px;
+        span {
+            display: block;
+            font-family: 'Vollkorn', serif;
+            font-style: italic;
+            font-size: 16px;
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+}
