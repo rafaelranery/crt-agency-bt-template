@@ -1,0 +1,32 @@
+.contact {
+    text-align: center;
+    padding: 50px 20px 0;
+
+    &__form {
+        margin: 100px auto;
+        max-width: 580px;
+
+        &__input-group {
+            margin-bottom: 5px;
+
+            label {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 14px; 
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+            
+            input, textarea {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                padding: 8px 12px;
+                border: 0.8px solid #c1c1c1;
+                font-family: 'Source Sans Pro', serif;
+                border-radius: none !important;
+                resize: none;
+            }
+        }
+    }
+}

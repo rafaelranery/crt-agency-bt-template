@@ -4,6 +4,9 @@
 @import 'divider';
 @import 'services-grid';
 @import 'quotes';
+@import 'porfolio-grid';
+@import 'contact';
+@import 'footer';
 
 /* reset */
 * {
@@ -16,6 +19,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /* class configs */
 .title {
